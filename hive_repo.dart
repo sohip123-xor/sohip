@@ -16,3 +16,10 @@ class HiveRepo {
       ..sort((a,b)=> b.at.compareTo(a.at));
   }
 
+  ScanResult? getById(String id) {
+    final box = Hive.box<String>(boxName);
+    final s = box.get(id);
+    if (s==null) return null;
+    return ScanResult.fromJson(jsonDecode(s));
+  }
+}
