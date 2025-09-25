@@ -9,3 +9,15 @@ class ReportPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final ScanResult r = ModalRoute.of(context)!.settings.arguments as ScanResult;
     Color badge(int s)=> s>=80?Colors.green : s>=50?Colors.amber : Colors.red;
+
+    return Scaffold(
+      appBar: AppBar(title: Text(r.target.uri.host)),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          Card(child: ListTile(
+            title: Text('Security Score: ${r.score}'),
+            trailing: CircleAvatar(backgroundColor: badge(r.score), radius: 12),
+            subtitle: Text('Scanned at: ${r.at.toLocal()}'),
+          )),
+        
