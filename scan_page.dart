@@ -14,3 +14,13 @@ class _ScanPageState extends State<ScanPage> {
   final _repo = HiveRepo();
   bool _loading = false;
   String _lastSummary = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Vulnerability Scanner'),
+        actions: [
+          IconButton(onPressed: ()=> Navigator.pushNamed(context, '/history'), icon: const Icon(Icons.history))
+        ],
+     
