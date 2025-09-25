@@ -36,4 +36,17 @@ class ReportPage extends StatelessWidget {
               const ListTile(title: Text('Open Ports')),
               for (final p in r.ports) ListTile(title: Text('${p.port} (${p.service})'), trailing: p.risky ? const Icon(Icons.warning) : null)
             ]))
-        
+          ],
+          const SizedBox(height: 8),
+          Card(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const ListTile(title: Text('Recommendations')),
+            Padding(
+                padding: const EdgeInsets.all(12),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: r.recommendations.map((e)=>Text('• $e')).toList())
+            )
+          ]))
+        ],
+      ),
+    );
+  }
+}
