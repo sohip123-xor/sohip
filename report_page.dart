@@ -25,4 +25,9 @@ class ReportPage extends StatelessWidget {
             title: const Text('TLS / HTTPS'),
             subtitle: Text('HTTPS: ${r.tls.isHttps}\nHandshake OK: ${r.tls.handshakeOk}\nCert Likely Valid: ${r.tls.certValidLikely}\nTLS Version: ${r.tls.tlsVersion ?? "-"}'),
           )),
+          const SizedBox(height: 8),
+          Card(child: ListTile(
+            title: const Text('Security Headers'),
+            subtitle: Text('CSP: ${r.headers.hasCSP}\nX-Frame-Options: ${r.headers.hasXFO}\nHSTS: ${r.headers.hasHSTS}\nX-Content-Type-Options: ${r.headers.hasXCTO}'),
+          )),
          
