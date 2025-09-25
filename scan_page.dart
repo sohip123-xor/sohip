@@ -24,4 +24,8 @@ class _ScanPageState extends State<ScanPage> {
           IconButton(onPressed: ()=> Navigator.pushNamed(context, '/history'), icon: const Icon(Icons.history))
         ],
       ),
-    
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+           
