@@ -28,4 +28,7 @@ class _ScanPageState extends State<ScanPage> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-         
+            TextField(controller: _c, decoration: const InputDecoration(labelText: 'Enter URL (e.g. example.com)')),
+            const SizedBox(height: 12),
+            ElevatedButton(
+            
