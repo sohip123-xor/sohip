@@ -30,4 +30,10 @@ class ReportPage extends StatelessWidget {
             title: const Text('Security Headers'),
             subtitle: Text('CSP: ${r.headers.hasCSP}\nX-Frame-Options: ${r.headers.hasXFO}\nHSTS: ${r.headers.hasHSTS}\nX-Content-Type-Options: ${r.headers.hasXCTO}'),
           )),
-         
+          if (r.ports.isNotEmpty) ...[
+            const SizedBox(height: 8),
+            Card(child: Column(children: [
+              const ListTile(title: Text('Open Ports')),
+              for (final p in r.ports) ListTile(title: Text('${p.port} (${p.service})'), trailing: p.risky ? const Icon(Icons.warning) : null)
+            ]))
+        
