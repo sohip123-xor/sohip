@@ -8,3 +8,11 @@ class HiveRepo {
   Future<void> save(ScanResult r) async {
     final box = Hive.box<String>(boxName);
     box.put(r.id, jsonEncode(r.toJson()));
+  }
+
+  List<ScanResult> listAll() {
+    final box = Hive.box<String>(boxName);
+    return box.values.map((s)=> ScanResult.fromJson(jsonDecode(s))).toList()
+      ..sort((a,b)=> b.at.compareTo(a.at));
+  }
+
