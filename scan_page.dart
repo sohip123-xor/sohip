@@ -8,3 +8,9 @@ class ScanPage extends StatefulWidget {
   @override State<ScanPage> createState()=> _ScanPageState();
 }
 
+class _ScanPageState extends State<ScanPage> {
+  final _c = TextEditingController(text: 'https://example.com');
+  final _usecase = ScanUseCase();
+  final _repo = HiveRepo();
+  bool _loading = false;
+  String _lastSummary = '';
