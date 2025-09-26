@@ -6,4 +6,5 @@ class TlsChecker {
     final isHttps = uri.scheme == 'https';
     if (!isHttps) return TlsFindings(isHttps: false, handshakeOk: false, tlsVersion: null, certValidLikely: false);
     try {
-     
+      final client = HttpClient();
+    
