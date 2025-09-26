@@ -43,4 +43,9 @@ class _ScanPageState extends State<ScanPage> {
                   if (!mounted) return;
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Scan failed: $e')));
                 } finally {
-                
+                  if (mounted) setState(()=>_loading=false);
+                }
+              },
+              child: _loading ? const SizedBox(width:20,height:20,child:CircularProgressIndicator(strokeWidth:2)) : const Text('Scan'),
+            ),
+           
