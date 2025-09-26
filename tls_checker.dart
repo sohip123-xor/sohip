@@ -30,4 +30,9 @@ class TlsChecker {
       final response = await request.close();
       await response.drain();
       client.close();
-  
+      return TlsFindings(isHttps: true, handshakeOk: true, tlsVersion: null, certValidLikely: true);
+    } catch (_) {
+      return TlsFindings(isHttps: true, handshakeOk: false, tlsVersion: null, certValidLikely: false);
+    }
+  }
+}
