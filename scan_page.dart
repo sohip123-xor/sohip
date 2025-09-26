@@ -38,4 +38,9 @@ class _ScanPageState extends State<ScanPage> {
                   await _repo.save(r);
                   if (!mounted) return;
                   setState(()=>_lastSummary = 'Scanned ${r.target.uri.host} — Score: ${r.score}');
-               
+                  Navigator.pushNamed(context, '/report', arguments: r);
+                } catch (e) {
+                  if (!mounted) return;
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Scan failed: $e')));
+                } finally {
+                
