@@ -27,3 +27,7 @@ class TlsChecker {
       final client = HttpClient();
       client.connectionTimeout = const Duration(seconds: 8);
       final request = await client.getUrl(uri);
+      final response = await request.close();
+      await response.drain();
+      client.close();
+  
