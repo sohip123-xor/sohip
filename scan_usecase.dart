@@ -35,4 +35,11 @@ class ScanUseCase {
       ports: ports,
       score: score,
       recommendations: rec,
-  
+    );
+  }
+
+  Uri _normalize(String input) {
+    final withScheme = input.startsWith('http') ? input : 'https://$input';
+    return Uri.parse(withScheme);
+  }
+}
