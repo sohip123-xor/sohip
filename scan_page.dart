@@ -48,4 +48,16 @@ class _ScanPageState extends State<ScanPage> {
               },
               child: _loading ? const SizedBox(width:20,height:20,child:CircularProgressIndicator(strokeWidth:2)) : const Text('Scan'),
             ),
-           
+            const SizedBox(height: 18),
+            Text(_lastSummary),
+            const SizedBox(height: 10),
+            ElevatedButton.icon(
+                onPressed: ()=> Navigator.pushNamed(context, '/history'),
+                icon: const Icon(Icons.list), label: const Text('Open History')
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
