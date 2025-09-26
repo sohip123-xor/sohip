@@ -21,3 +21,6 @@ class ScanUseCase {
         hasXCTO: headersMap.containsKey('x-content-type-options'),
         raw: headersMap
     );
+    final tlsFindings = await _tls.check(normalized);
+    final ports = await _ports.fetchOpenPorts(normalized.host);
+   
