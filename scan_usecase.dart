@@ -10,3 +10,9 @@ class ScanUseCase {
   final _tls = TlsChecker();
   final _ports = PortApiClient();
   final _score = ScoreCalculator();
+
+  Future<ScanResult> run(String inputUrl) async {
+    final normalized = _normalize(inputUrl);
+    final headersMap = await _headers.getHeaders(normalized);
+    final headerFindings = HeaderFindings(
+      
