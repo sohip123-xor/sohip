@@ -29,4 +29,10 @@ class ScanUseCase {
     return ScanResult(
       id: const Uuid().v4(),
       at: DateTime.now().toUtc(),
-    
+      target: ScanTarget(inputUrl, normalized),
+      headers: headerFindings,
+      tls: tlsFindings,
+      ports: ports,
+      score: score,
+      recommendations: rec,
+  
