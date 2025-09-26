@@ -23,4 +23,5 @@ class ScanUseCase {
     );
     final tlsFindings = await _tls.check(normalized);
     final ports = await _ports.fetchOpenPorts(normalized.host);
-   
+    final score = _score.calculate(headerFindings, tlsFindings, ports);
+    final rec = _score.recommendations(headerFindings, tlsFindings, ports);
