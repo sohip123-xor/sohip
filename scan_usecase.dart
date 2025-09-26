@@ -25,3 +25,8 @@ class ScanUseCase {
     final ports = await _ports.fetchOpenPorts(normalized.host);
     final score = _score.calculate(headerFindings, tlsFindings, ports);
     final rec = _score.recommendations(headerFindings, tlsFindings, ports);
+
+    return ScanResult(
+      id: const Uuid().v4(),
+      at: DateTime.now().toUtc(),
+    
