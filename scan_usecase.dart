@@ -15,4 +15,9 @@ class ScanUseCase {
     final normalized = _normalize(inputUrl);
     final headersMap = await _headers.getHeaders(normalized);
     final headerFindings = HeaderFindings(
-      
+        hasCSP: headersMap.containsKey('content-security-policy'),
+        hasXFO: headersMap.containsKey('x-frame-options'),
+        hasHSTS: headersMap.containsKey('strict-transport-security'),
+        hasXCTO: headersMap.containsKey('x-content-type-options'),
+        raw: headersMap
+    );
