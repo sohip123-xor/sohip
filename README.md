@@ -16,6 +16,12 @@
 
 ---
 
+## Demo
+
+Insert gif or ths is my wiup
+[Demo](https://sohip123-xor.github.io/Traffic_linght/) 
+
+
 ### In English
 I would like to express my gratitude to everyone who supported me in developing this project.  
 Special thanks to:  
