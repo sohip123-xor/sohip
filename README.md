@@ -203,7 +203,7 @@ class _SinglePageHomeState extends State<SinglePageHome> {
 *MAIN*
 
 *الدور: تطوير وتنفيذ **واجهات فلاتر (Flutter UI)* وتنسيقها.
-GitHub: [https://github.com/Loay-Suhaib](https://github.com/sohip123-xor/sohip.git)
+GitHub: [(https://github.com/sohip123-xor/sohip.git)]
 
 *صهيب وليد*
 
