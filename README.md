@@ -19,7 +19,7 @@
 ## Demo
 
 Insert gif or ths is my wiup
-   [Demo](file:///F:/Traffic_ligiht/Traffic_ligiht/index.html) 
+   [Demo](https://F:/Traffic_ligiht/Traffic_ligiht/index.html) 
 
 
 ### In English
@@ -119,7 +119,7 @@ class _SinglePageHomeState extends State<SinglePageHome> {
 
 ## Used By
 
-* *[@loay-suhaib]* (https://github.com/loay-suhaib)
+* *[@loay-suhaib]* (https://github.com/sohip123-xor/sohip.git)
 * *[@sara-Marish]* (https://github.com/sara-Marish)
 
 👥 المساهمون والمطورون (Contributors)
@@ -146,8 +146,6 @@ GitHub: https://github.com/Abdulmalik-Mohamed (يرجى استبداله باس�
 
 *الدور: مراجعة الأكواد (Code Review) وضمان **جودة* الشيفرة و*كتابة التوثيق* الفني للمشروع.
 GitHub: https://github.com/Abdulqadir-Mohamed (يرجى استبداله باسم المستخدم الفعلي)
-## Demo
-https://github.com/loai95378-dev/loai-sohaip
 
 #### Get all items
 
