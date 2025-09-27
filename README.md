@@ -127,17 +127,17 @@ class _SinglePageHomeState extends State<SinglePageHome> {
 نقدر جهود كل من ساهم في بناء وتطوير هذا المشروع. الشكر الجزيل للمطورين التاليين:
 
 
-*لؤي صهيب*
+*صهيب وليد*
 
 *الدور: تطوير وتنفيذ **واجهات فلاتر (Flutter UI)* وتنسيقها.
-GitHub: https://github.com/Loay-Suhaib
+GitHub: [https://github.com/Loay-Suhaib](https://github.com/sohip123-xor/sohip.git)
 
-*صهيب وليد*
+*لؤي*
 
 *الدور: بناء **المنطق الخلفي (Business Logic)* للتطبيق وإدارة خدمات الـ *API*.
 GitHub: https://github.com/Suhaib-Waleed (يرجى استبداله باسم المستخدم الفعلي)
 
-*عبد الملك محمد*
+*عبد الملك *
 
 *الدور: إدارة **حالة التطبيق (State Management)* وضمان تكامل الشيفرة (Code Integration).
 GitHub: https://github.com/Abdulmalik-Mohamed (يرجى استبداله باسم المستخدم الفعلي)
